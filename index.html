@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>BEM Guide</title>
+    <meta
+      name="description"
+      content="Can't remember what combination of dashes and underscores to use? Neither can I, so I made BEM Guide."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="BEM Guide" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bem.guide/" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <style>
+      @font-face {
+        font-family: "JetBrains Mono";
+        src: url("/JetBrainsMono-SemiBold.woff2");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+
+        color: inherit;
+        font-size: inherit;
+
+        text-decoration: inherit;
+      }
+
+      body {
+        max-width: 80em;
+        margin: 0 auto;
+        padding: 0 1em;
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: 100%;
+      }
+
+      html {
+        background-color: var(--bg);
+        width: 100%;
+        height: 100%;
+
+        font-variant-ligatures: none;
+        font-family: "JetBrains Mono", monospace;
+        color: var(--fg-primary);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      :root {
+        --bg: #fafafa;
+        --fg-primary: rgba(0, 0, 0, 0.92);
+        --fg-secondary: rgba(0, 0, 0, 0.5);
+        --fg-tertiary: rgba(0, 0, 0, 0.2);
+        --color-block: #52a832;
+        --color-element: #3277a8;
+        --color-modifier: #c63a33;
+
+        --primary: #488adf;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000;
+          --fg-primary: hsla(200, 10%, 100%, 1);
+          --fg-secondary: hsla(200, 10%, 50%, 1);
+          --fg-tertiary: hsla(200, 10%, 30%, 1);
+        }
+      }
+
+      a[href] {
+        color: var(--primary);
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .page {
+        margin: auto 0;
+      }
+
+      .page-header {
+        padding: 2em 0;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .bem {
+        color: var(--fg-secondary);
+      }
+
+      .bem__block {
+        color: var(--color-block);
+      }
+
+      .bem__element {
+        color: var(--color-element);
+      }
+
+      .bem__modifier {
+        color: var(--color-modifier);
+      }
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      h2 {
+        font-size: 1.6em;
+
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 720px) {
+        h1 {
+          font-size: 1.8em;
+        }
+
+        h2 {
+          font-size: 1.4em;
+        }
+      }
+
+      .page-footer {
+        padding: 1em 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .page-footer__built-by {
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 0.7em;
+        color: var(--fg-secondary);
+      }
+
+      a.page-footer__with-love {
+        color: var(--fg-tertiary);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <h1 class="bem">
+          .<span class="bem__block">block</span>__<span class="bem__element">element</span>--<span class="bem__modifier"
+            >modifier</span
+          >
+        </h1>
+      </header>
+      <h2 class="bem">
+        .<span class="bem__block">user-avatar</span>__<span class="bem__element">hexagon</span>--<span
+          class="bem__modifier"
+          >blocked</span
+        >
+      </h2>
+      <h2 class="bem">.<span class="bem__block">card</span>__<span class="bem__element">hero-image</span></h2>
+      <h2 class="bem">
+        .<span class="bem__block">contact-form</span>__<span class="bem__element">email-address</span>--<span
+          class="bem__modifier"
+          >verified</span
+        >
+      </h2>
+    </main>
+    <footer class="page-footer">
+      <span class="page-footer__built-by" title="I had to suppress the urge to include the heart emoji."
+        >Built in Colorado by <a href="https://twitter.com/ForestKatsch">@ForestKatsch</a>
+      </span>
+      <a class="page-footer__built-by page-footer__with-love" href="http://getbem.com/naming/"
+        >(with love and thanks to the getbem team)</a
+      >
+    </footer>
+  </body>
+</html>
