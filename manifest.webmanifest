@@ -3,7 +3,7 @@
   "name": "BEM Guide",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
